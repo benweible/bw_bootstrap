@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'about/contact'
+
+  get 'welcome/about'
+
+  get 'welcome/contact'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
