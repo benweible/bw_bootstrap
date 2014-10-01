@@ -1,7 +1,7 @@
 set :stage, :dev
 
 server 'localhost',
-  user: 'ubuntu',
+  user: 'root',
   roles: %w{web app db},
   port: 22,
   ssh_options: {
