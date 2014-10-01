@@ -1,12 +1,9 @@
 set :stage, :dev
 
 server 'localhost',
-  user: 'root',
+  user: 'jenkins',
   roles: %w{web app db},
   port: 22,
-  ssh_options: {
-    forward_agent: true
-  }
 
 
 set :ruby_version, "ruby-2.1.2"
@@ -15,7 +12,7 @@ set :deploy_to, "/var/www/rails/bootstrap"
 #load "deploy/assets" # uncomment if using the asset pipeline
 
 ## update only if needed
-#set :rails_env, 'remote_development'
+set :rails_env, 'remote_development'
 #after "deploy", "deploy:migrate"
 
 set :branch, 'master'
